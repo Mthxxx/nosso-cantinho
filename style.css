@@ -1,0 +1,341 @@
+.hidden {
+    display: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #ffe6eb;
+    color: #333;
+}
+
+.error-text {
+    color: red;
+}
+
+#content h1 {
+    color: #e63956;
+}
+
+#contador-dias {
+    margin-top: 15px;
+    font-size: 20px;
+    color: #e63956;
+    font-weight: bold;
+}
+
+#login-container {
+    margin-top: 150px;
+}
+
+input{
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+}
+
+button{
+    padding: 10px 20px;
+    background: #ff4d6d;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #e63956;
+}
+
+
+.gallery {
+    margin-top: 30px;
+    display: flex;
+    border-radius: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.img-wrapper {
+    width: calc((100% - 60px) / 3);
+    display: flex;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-wrapper img {
+    width: auto;
+    height: auto;
+    border-radius: 12px;
+    max-height: 400px;
+    object-fit: contain;
+    transition: transform 0.3s, filter 0.5s;
+}
+
+.img-wrapper img:hover {
+    transform: scale(1.5);
+    border-radius: 12px;
+    filter:blur(0);
+}
+
+.blurred{
+    filter: blur(10px);
+}
+
+/* Carta */
+#letter-container {
+    position: relative;
+    display: flex;
+    margin-top: 100px; /* espaço entre as fotos e o envelope */
+    margin-bottom: 50px; /* espaço antes do footer */
+    justify-content: center;
+    margin-bottom: -50px;
+    z-index: 100;
+}
+
+.envelope {
+    width: 200px;
+    height: 150px;
+    margin: auto;
+    position: relative;
+    background: #ff4d6d;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.envelope:hover {
+    transform: scale(1.05);
+}
+
+.flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 75px solid #e63956
+}
+
+.body {
+    position: absolute;
+    bottom: 0;
+    width: 200px;
+    height: 75px;
+    background: #ff4d6d;
+    border-radius: 0 0 5px 5px;
+}
+
+.letter {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 80%;
+    height: 80%;
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #ff4d6d;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: transform 1s ease-in-out;
+    z-index: -1;
+} 
+
+/* Mensagem da carta */
+#letter-message {
+    position: absolute;
+    bottom: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    padding: 15px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.4;
+    text-align: center;
+    color: #333;
+    z-index: 10;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(-50px); }
+} 
+
+#letter-message button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #ff4d6d;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+#letter-message button:hover {
+    background: #e63956;
+}
+
+#hearts-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.heart {
+    position: absolute;
+    bottom: 0;
+    color: #ff4d6d;
+    font-size: 24px;
+    animation: rise 4s linear forwards;
+    opacity: 0.8;
+}
+
+@keyframes rise {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+    }
+} 
+
+/* Rodapé vazio */
+#footer-space {
+    height: 100px;
+    pointer-events: none;
+}
+
+#footer {
+    width: 100%;
+    background-color: #ff4d6d;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 0; /* espaço entre envelope e rodapé */
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+#footer p {
+    margin: 5px 0;
+}
+
+.blur-on-hover {
+    filter: blur(10px);
+    transition: filter 0.6s ease;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.blur-on-hover:hover {
+    filter: blur(0);
+}
+
+.shooting-star {
+    position: fixed;
+    top: -50px;
+    width: 2px;
+    height: 80px;
+    background: linear-gradient(45deg, white, transparent);
+    opacity: 0.8;
+    transform: rotate(45deg);
+    animation: shoot 1.5s linear forwards;
+    z-index: 999;
+}
+
+@keyframes shoot {
+    0% {
+        transform: translate(0, 0) rotate(45deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(300px, 600px) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+#titulo {
+    font-family: 'Cursive', sans-serif;
+    font-size: 2.5rem;
+    color: #ff6b81;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid #ff6b81;
+}
+
+@keyframes blink {
+    0%, 100% { border-color: transparent; }
+    50% {border-color: #ff6b81}
+}
+
+#titulo {
+    animation: blink 0.7s infinite;
+}
+
+.petala-emoji {
+    position: fixed;
+    top: -50px;
+    pointer-events: none;
+    z-index: 9999;
+    user-select: none; /* evita seleção acidental */
+}
+
+#saudade-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    background-color: #ffb6c1;
+    color: white;
+    margin: 20px 0;
+    transition: background-color 0.3s;
+    margin-top: 100px;
+    margin-bottom: 0;
+}
+
+#saudade-btn:hover {
+    background-color: #ff69b4;
+}
+
+#saudade-heart-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.heart-pulsando {
+    font-size: 50px;
+    animation: pulsar 0.8s ease-in-out;
+}
+
+@keyframes pulsar {
+    0% {transform: scale(1); opacity: 1; }
+    50% {transform: scale(1.5); opacity: 0.7; }
+    100% {transform: scale(1); opacity: 0;}
+}

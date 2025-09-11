@@ -1,0 +1,104 @@
+<!DOCTYPE html> 
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Nosso cantinho❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Tela de Login -->
+    <div id="login-container">
+        <h2>Faça Login para entrar</h2>
+        <input type="text" id="username" placeholder="Usuário">
+        <input type="password" id="password" placeholder="Senha">
+        <button onclick="login()">Entrar</button>
+        <p id="error"></p>
+    </div>
+
+    <!-- Botão para cadastro -->
+    <button id="signup-btn">Fazer cadastro</button>
+
+    <!-- Tela de cadastro -->
+    <div id="signup-container" class="hidden">
+        <h2>Cadastro</h2>
+        <input type="text" id="signup-username" placeholder="Escolha um usuário">
+        <input type="password" id="signup-password" placeholder="Escolha uma senha">
+        <button id="create-btn">Cadastrar</button>
+        <button id="back-btn">Voltar</button>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <div id="content" class="hidden">
+        <h1 id="titulo">Bem-Vinda, meu amor 💕</h1>
+        <p>Você é a melhor parte da minha vida!</p>
+
+        <div id="contador-dias" class="hidden">
+            <h2>Estamos juntos há <span id="dias">0</span> dias❤️</h2>
+        </div>
+
+        <!-- Fotos -->
+        <div class="gallery">
+            <div class="img-wrapper"><img src="imagens/foto1.jpg" class="blurred"></div>
+            <div class="img-wrapper"><img src="imagens/foto2.jpg" class="blurred"></div>
+            <div class="img-wrapper"><img src="imagens/foto3.jpg" class="blurred"></div>
+            <div class="img-wrapper"><img src="imagens/foto4.jpg" class="blurred"></div>
+            <div class="img-wrapper"><img src="imagens/foto5.jpg" class="blurred"></div>
+            <div class="img-wrapper"><img src="imagens/foto6.jpg" class="blurred"></div>
+            <div class="img-wrapper"><img src="imagens/foto7.jpg" class="blurred"></div>
+            <div class="img-wrapper"><img src="imagens/foto8.jpg" class="blurred"></div>
+            <div class="img-wrapper"><img src="imagens/foto9.jpg" class="blurred"></div>
+            <div class="img-wrapper"><img src="imagens/foto10.jpg" class="blurred"></div>
+            <div class="img-wrapper"><img src="imagens/foto11.jpg" class="blur-on-hover"></div>
+            <div class="img-wrapper"><img src="imagens/foto12.jpg" class="blurred"></div>
+            <div class="img-wrapper"><img src="imagens/foto13.jpg" class="blurred"></div>
+            <div class="img-wrapper"><img src="imagens/foto14.jpg" class="blurred"></div>
+            <div class="img-wrapper"><img src="imagens/foto15.jpg" class="blurred"></div>
+            <div class="img-wrapper"><img src="imagens/foto16.jpg" class="blurred"></div>
+            <div class="img-wrapper"><img src="imagens/foto17.jpg" class="blurred"></div>
+            <div class="img-wrapper"><img src="imagens/foto18.jpg" class="blurred"></div>
+            <div class="img-wrapper"><img src="imagens/foto19.jpg" class="blurred"></div>
+            <div class="img-wrapper"><img src="imagens/foto20.jpg" class="blurred"></div>
+            <div class="img-wrapper"><img src="imagens/foto21.jpg" class="blurred"></div>
+        </div>
+
+        <!-- Cartinha e envelope agora dentro do conteúdo -->
+        <div id="letter-container" class="hidden">
+            <div class="envelope" onclick="openLetter()">
+                <div class="flap"></div>
+                <div class="body"></div>
+                <div class="letter"></div>
+            </div>
+
+            <div id="letter-message" class="hidden">
+                <h2>Para o amor da minha vida ❤️</h2>
+                <p>
+                    Desde o momento em que você entrou na minha vida, tudo ficou mais bonito.
+                    Obrigado por ser quem você é, por ter paciência comigo e por me fazer tão feliz.
+                    Eu te amo infinitamente momo! 💕
+                </p>
+                <button id="close-btn">Fechar💌</button>
+            </div>
+        </div>
+
+        <button id="saudade-btn">Aperte se sentir saudade🥺</button>
+        <div id="saudade-heart-container"> </div>
+
+
+    </div>
+
+    <!-- Container dos corações -->
+    <div id="hearts-container"></div>
+    
+    <div id="footer-space"></div>
+
+<footer id="footer" class="hidden">
+    <p>Brasil</p>
+    <p>Política de privacidade | Política de cookies | Termos de uso</p>
+    <p>© 2025 Nosso Cantinho. Todos os direitos reservados. Matheus Leite Rodrigues</p>
+    <p>Endereço: Rua Princesa Isabel, 93 - Vila Belmiro - Santos - SP - CEP: 011075-501</p>
+</footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
